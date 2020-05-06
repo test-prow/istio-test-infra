@@ -66,6 +66,7 @@ plugins:
   - wip
 
   aspenmesh/istio-test-infra:
+  - size
   - assign
   - config-updater
   - golint
