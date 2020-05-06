@@ -92,7 +92,7 @@ in_repo_config:
   enabled:
     private-istio: true
 
-# Tide is not enabled
+# Tide is not enabled fror aspen mesh private repos
 tide:
   queries:
   - repos:
@@ -124,12 +124,12 @@ tide:
     labels:
     - "cla: yes"
     - auto-merge
-    missingLabels: *istio_tide_missing_labels
+    missingLabels: &istio_tide_missing_labels
     author: istio-testing
     reviewApprovedRequired: false
   - orgs:
     - istio-private
-    missingLabels: *istio_tide_missing_labels
+    missingLabels: &istio_tide_missing_labels
     reviewApprovedRequired: true
   merge_method:
     istio: squash
