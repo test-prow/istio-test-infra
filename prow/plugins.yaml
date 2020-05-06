@@ -32,17 +32,8 @@ lgtm:
   - aspenmesh/private-istio
   - aspenmesh/private-cni
   - aspenmesh/private-proxy
-  - aspenmesh/private-istio-releases/pipeline
   review_acts_as_lgtm: true
   trusted_team_for_sticky_lgtm: "Istio Hackers"
-
-approve:
-- repos:
-  - istio-releases/pipeline
-  implicit_self_approve: true
-- repos:
-  - istio-ecosystem/authservice
-  implicit_self_approve: true
 
 plugins:
   aspenmesh/private-istio:
@@ -75,10 +66,6 @@ plugins:
   - skip
   - slackevents
 
-  private-istio-releases/pipeline:
-  - lifecycle
-  - hold
-
 external_plugins:
   aspenmesh/private-istio:
   - name: needs-rebase
@@ -106,8 +93,3 @@ external_plugins:
     events:
     - issue_comment
     - pull_request 
-
-  private-istio-releases/pipeline:
-  - name: needs-rebase
-    events:
-    - pull_request
