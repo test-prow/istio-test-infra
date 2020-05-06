@@ -45,22 +45,22 @@ approve:
   implicit_self_approve: true
 
 plugins:
-  private-istio:
+  aspenmesh/private-istio:
   - size
   - trigger
   - wip
 
-  private-cni:
+  aspenmesh/private-cni:
   - size
   - trigger
   - wip 
 
-  private-proxy:
+  aspenmesh/private-proxy:
   - size
   - trigger
   - wip   
 
-  private-istio-releases:
+  aspenmesh/private-istio-releases:
   - size
   - trigger
   - wip
