@@ -1,0 +1,172 @@
+branch_spec: &branch_spec
+- "^release-1.4$"
+
+presubmits:
+
+  aspenmesh/private-proxy:
+
+  - name: proxy-presubmit
+    annotations:
+    context: prow/proxy-presubmit.sh
+    branches: *branch_spec
+    always_run: true
+    decorate: true
+    clone_uri: git@github.com:aspenmesh/private-proxy.git
+    labels:
+      preset-enable-ssh: "true" 
+      preset-service-account: "true"         
+    path_alias: istio.io/proxy
+    timeout: 60m
+    extra_refs:
+    - org: istio
+      repo: istio
+      base_ref: release-1.4
+      path_alias: istio.io/istio
+    spec:
+      containers:
+      - image: gcr.io/istio-testing/prowbazel:0.5.16
+        command:
+        - ./prow/proxy-presubmit.sh
+        resources:
+          requests:
+            memory: "8Gi"
+            cpu: "8000m"
+          limits:
+            memory: "60Gi"
+            cpu: "16000m"
+      nodeSelector:
+        testing: test-pool
+
+  - name: proxy-presubmit-asan
+    annotations:
+    context: prow/proxy-presubmit-asan.sh
+    branches: *branch_spec
+    always_run: true
+    decorate: true
+    clone_uri: git@github.com:aspenmesh/private-proxy.git
+    labels:
+      preset-enable-ssh: "true" 
+      preset-service-account: "true"         
+    path_alias: istio.io/proxy
+    timeout: 120m
+    extra_refs:
+    - org: istio
+      repo: istio
+      base_ref: release-1.4
+      path_alias: istio.io/istio
+    spec:
+      containers:
+      - image: gcr.io/istio-testing/prowbazel:0.5.16
+        command:
+        - ./prow/proxy-presubmit-asan.sh
+        resources:
+          requests:
+            memory: "8Gi"
+            cpu: "8000m"
+          limits:
+            memory: "60Gi"
+            cpu: "16000m"
+      nodeSelector:
+        testing: test-pool
+
+  - name: proxy-presubmit-tsan
+    annotations:
+    context: prow/proxy-presubmit-tsan.sh
+    branches: *branch_spec
+    always_run: true
+    decorate: true
+    clone_uri: git@github.com:aspenmesh/private-proxy.git
+    labels:
+      preset-enable-ssh: "true" 
+      preset-service-account: "true"             
+    path_alias: istio.io/proxy
+    timeout: 60m
+    extra_refs:
+    - org: istio
+      repo: istio
+      base_ref: release-1.4
+      path_alias: istio.io/istio
+    spec:
+      containers:
+      - image: gcr.io/istio-testing/prowbazel:0.5.16
+        command:
+        - ./prow/proxy-presubmit-tsan.sh
+        resources:
+          requests:
+            memory: "8Gi"
+            cpu: "8000m"
+          limits:
+            memory: "60Gi"
+            cpu: "16000m"
+      nodeSelector:
+        testing: test-pool
+
+  - name: proxy-presubmit-release
+    annotations:
+    context: prow/proxy-presubmit-release.sh
+    branches: *branch_spec
+    always_run: true
+    decorate: true
+    clone_uri: git@github.com:aspenmesh/private-proxy.git
+    labels:
+      preset-enable-ssh: "true" 
+      preset-service-account: "true"             
+    path_alias: istio.io/proxy
+    timeout: 60m
+    extra_refs:
+    - org: istio
+      repo: istio
+      base_ref: release-1.4
+      path_alias: istio.io/istio
+    spec:
+      containers:
+      - image: gcr.io/istio-testing/prowbazel:0.5.16
+        command:
+        - ./prow/proxy-presubmit-release.sh
+        resources:
+          requests:
+            memory: "8Gi"
+            cpu: "8000m"
+          limits:
+            memory: "60Gi"
+            cpu: "16000m"
+      nodeSelector:
+        testing: test-pool
+
+postsubmits:
+
+  aspenmesh/private-proxy:
+
+  - name: proxy-postsubmit
+    annotations:
+    context: prow/proxy-postsubmit.sh
+    branches: *branch_spec
+    always_run: true
+    decorate: true
+    clone_uri: git@github.com:aspenmesh/private-proxy.git
+    labels:
+      preset-enable-ssh: "true" 
+      preset-service-account: "true"             
+    path_alias: istio.io/proxy
+    timeout: 120m
+    extra_refs:
+    - org: istio
+      repo: istio
+      base_ref: release-1.4
+      path_alias: istio.io/istio
+    spec:
+      containers:
+      - image: gcr.io/istio-testing/prowbazel:0.5.16
+        command:
+        - ./prow/proxy-postsubmit.sh
+        securityContext:
+          privileged: true
+        resources:
+          requests:
+            memory: "8Gi"
+            cpu: "8000m"
+          limits:
+            memory: "60Gi"
+            cpu: "16000m"
+      nodeSelector:
+        testing: test-pool
