@@ -1,0 +1,100 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: deck
+  labels:
+    app.kubernetes.io/part-of: prow
+    app: deck
+spec:
+  replicas: 3
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+  template:
+    metadata:
+      labels:
+        app: deck
+    spec:
+      terminationGracePeriodSeconds: 30
+      containers:
+      - name: deck
+        image: gcr.io/k8s-prow/deck:v20200427-baaf248ed
+        ports:
+        - name: http
+          containerPort: 8080
+        args:
+        - --config-path=/etc/config/config.yaml
+        - --hook-url=http://hook:8888/plugin-help
+        - --job-config-path=/etc/job-config
+        - --redirect-http-to=prow.dev.twistio.io
+        - --tide-url=http://tide/
+        - --kubeconfig=/etc/kubeconfig/istio-config
+        - --spyglass
+        - --gcs-credentials-file=/etc/service-account/service-account.json
+        - --rerun-creates-job
+        - --oauth-url=/github-login
+        - --github-token-path=/etc/github/oauth
+        - --github-endpoint=http://ghproxy
+        - --github-endpoint=https://api.github.com
+        - --github-oauth-config-file=/etc/githuboauth/secret
+        - --cookie-secret=/etc/cookie/secret
+        volumeMounts:
+        - name: oauth-config
+          mountPath: /etc/githuboauth
+          readOnly: true
+        - name: cookie-secret
+          mountPath: /etc/cookie
+          readOnly: true
+        - name: oauth-token
+          mountPath: /etc/github
+          readOnly: true
+        - name: config
+          mountPath: /etc/config
+          readOnly: true
+        - name: job-config
+          mountPath: /etc/job-config
+          readOnly: true
+        - mountPath: /etc/kubeconfig
+          name: kubeconfig
+          readOnly: true
+        - name: service
+          mountPath: /etc/service-account
+          readOnly: true
+        livenessProbe:
+          httpGet:
+            path: /healthz
+            port: 8081
+          initialDelaySeconds: 3
+          periodSeconds: 3
+        readinessProbe:
+          httpGet:
+            path: /healthz/ready
+            port: 8081
+          initialDelaySeconds: 10
+          periodSeconds: 3
+          timeoutSeconds: 600
+      volumes:
+      - name: oauth-config
+        secret:
+          secretName: github-oauth-config
+      - name: oauth-token
+        secret:
+          secretName: oauth-token
+      - name: cookie-secret
+        secret:
+          secretName: cookie
+      - name: config
+        configMap:
+          name: config
+      - name: job-config
+        configMap:
+          name: job-config
+      - name: kubeconfig
+        secret:
+          defaultMode: 420
+          secretName: kubeconfig
+      - name: service
+        secret:
+          secretName: service-account
