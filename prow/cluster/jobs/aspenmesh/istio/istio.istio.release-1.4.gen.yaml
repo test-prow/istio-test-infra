@@ -2,9 +2,6 @@
 postsubmits:
   aspenmesh/private-istio:
   - annotations:
-      testgrid-alert-email: dex@aspenmesh.io
-      testgrid-dashboards: istio_release-1.4_istio_postsubmit
-      testgrid-num-failures-to-alert: "1"
     branches:
     - ^release-1.4$
     decorate: true
@@ -38,9 +35,6 @@ postsubmits:
       nodeSelector:
         testing: test-pool
   - annotations:
-      testgrid-alert-email: dex@aspenmesh.io
-      testgrid-dashboards: istio_release-1.4_istio_postsubmit
-      testgrid-num-failures-to-alert: "1"
     branches:
     - ^release-1.4$
     decorate: true
@@ -69,9 +63,6 @@ postsubmits:
       nodeSelector:
         testing: test-pool
   - annotations:
-      testgrid-alert-email: dex@aspenmesh.io
-      testgrid-dashboards: istio_release-1.4_istio_postsubmit
-      testgrid-num-failures-to-alert: "1"
     branches:
     - ^release-1.4$
     decorate: true
@@ -104,9 +95,6 @@ postsubmits:
       nodeSelector:
         testing: test-pool
   - annotations:
-      testgrid-alert-email: dex@aspenmesh.io
-      testgrid-dashboards: istio_release-1.4_istio_postsubmit
-      testgrid-num-failures-to-alert: "1"
     branches:
     - ^release-1.4$
     decorate: true
@@ -156,9 +144,6 @@ postsubmits:
       - emptyDir: {}
         name: docker-root
   - annotations:
-      testgrid-alert-email: dex@aspenmesh.io
-      testgrid-dashboards: istio_release-1.4_istio_postsubmit
-      testgrid-num-failures-to-alert: "1"
     branches:
     - ^release-1.4$
     decorate: true
@@ -208,9 +193,6 @@ postsubmits:
       - emptyDir: {}
         name: docker-root
   - annotations:
-      testgrid-alert-email: dex@aspenmesh.io
-      testgrid-dashboards: istio_release-1.4_istio_postsubmit
-      testgrid-num-failures-to-alert: "1"
     branches:
     - ^release-1.4$
     decorate: true
@@ -258,9 +240,6 @@ postsubmits:
       - emptyDir: {}
         name: docker-root
   - annotations:
-      testgrid-alert-email: dex@aspenmesh.io
-      testgrid-dashboards: istio_release-1.4_istio_postsubmit
-      testgrid-num-failures-to-alert: "1"
     branches:
     - ^release-1.4$
     decorate: true
@@ -310,9 +289,6 @@ postsubmits:
       - emptyDir: {}
         name: docker-root
   - annotations:
-      testgrid-alert-email: dex@aspenmesh.io
-      testgrid-dashboards: istio_release-1.4_istio_postsubmit
-      testgrid-num-failures-to-alert: "1"
     branches:
     - ^release-1.4$
     decorate: true
@@ -362,9 +338,6 @@ postsubmits:
       - emptyDir: {}
         name: docker-root
   - annotations:
-      testgrid-alert-email: dex@aspenmesh.io
-      testgrid-dashboards: istio_release-1.4_istio_postsubmit
-      testgrid-num-failures-to-alert: "1"
     branches:
     - ^release-1.4$
     decorate: true
@@ -415,9 +388,6 @@ postsubmits:
       - emptyDir: {}
         name: docker-root
   - annotations:
-      testgrid-alert-email: dex@aspenmesh.io
-      testgrid-dashboards: istio_release-1.4_istio_postsubmit
-      testgrid-num-failures-to-alert: "1"
     branches:
     - ^release-1.4$
     decorate: true
@@ -470,9 +440,6 @@ postsubmits:
       - emptyDir: {}
         name: docker-root
   - annotations:
-      testgrid-alert-email: dex@aspenmesh.io
-      testgrid-dashboards: istio_release-1.4_istio_postsubmit
-      testgrid-num-failures-to-alert: "1"
     branches:
     - ^release-1.4$
     decorate: true
@@ -527,9 +494,6 @@ postsubmits:
       - emptyDir: {}
         name: docker-root
   - annotations:
-      testgrid-alert-email: dex@aspenmesh.io
-      testgrid-dashboards: istio_release-1.4_istio_postsubmit
-      testgrid-num-failures-to-alert: "1"
     branches:
     - ^release-1.4$
     decorate: true
@@ -585,9 +549,6 @@ postsubmits:
       - emptyDir: {}
         name: docker-root
   - annotations:
-      testgrid-alert-email: dex@aspenmesh.io
-      testgrid-dashboards: istio_release-1.4_istio_postsubmit
-      testgrid-num-failures-to-alert: "1"
     branches:
     - ^release-1.4$
     decorate: true
@@ -643,9 +604,6 @@ postsubmits:
       - emptyDir: {}
         name: docker-root
   - annotations:
-      testgrid-alert-email: dex@aspenmesh.io
-      testgrid-dashboards: istio_release-1.4_istio_postsubmit
-      testgrid-num-failures-to-alert: "1"
     branches:
     - ^release-1.4$
     decorate: true
@@ -699,9 +657,6 @@ postsubmits:
       - emptyDir: {}
         name: docker-root
   - annotations:
-      testgrid-alert-email: dex@aspenmesh.io
-      testgrid-dashboards: istio_release-1.4_istio_postsubmit
-      testgrid-num-failures-to-alert: "1"
     branches:
     - ^release-1.4$
     decorate: true
@@ -749,9 +704,6 @@ postsubmits:
       - emptyDir: {}
         name: docker-root
   - annotations:
-      testgrid-alert-email: dex@aspenmesh.io
-      testgrid-dashboards: istio_release-1.4_istio_postsubmit
-      testgrid-num-failures-to-alert: "1"
     branches:
     - ^release-1.4$
     decorate: true
@@ -780,9 +732,6 @@ postsubmits:
       nodeSelector:
         testing: test-pool
   - annotations:
-      testgrid-alert-email: dex@aspenmesh.io
-      testgrid-dashboards: istio_release-1.4_istio_postsubmit
-      testgrid-num-failures-to-alert: "1"
     branches:
     - ^release-1.4$
     decorate: true
@@ -811,9 +760,6 @@ postsubmits:
       nodeSelector:
         testing: test-pool
   - annotations:
-      testgrid-alert-email: dex@aspenmesh.io
-      testgrid-dashboards: istio_release-1.4_istio_postsubmit
-      testgrid-num-failures-to-alert: "1"
     branches:
     - ^release-1.4$
     decorate: true
@@ -842,9 +788,6 @@ postsubmits:
       nodeSelector:
         testing: test-pool
   - annotations:
-      testgrid-alert-email: dex@aspenmesh.io
-      testgrid-dashboards: istio_release-1.4_istio_postsubmit
-      testgrid-num-failures-to-alert: "1"
     branches:
     - ^release-1.4$
     decorate: true
@@ -873,9 +816,6 @@ postsubmits:
       nodeSelector:
         testing: test-pool
   - annotations:
-      testgrid-alert-email: dex@aspenmesh.io
-      testgrid-dashboards: istio_release-1.4_istio_postsubmit
-      testgrid-num-failures-to-alert: "1"
     branches:
     - ^release-1.4$
     decorate: true
@@ -904,9 +844,6 @@ postsubmits:
       nodeSelector:
         testing: test-pool
   - annotations:
-      testgrid-alert-email: dex@aspenmesh.io
-      testgrid-dashboards: istio_release-1.4_istio_postsubmit
-      testgrid-num-failures-to-alert: "1"
     branches:
     - ^release-1.4$
     decorate: true
@@ -935,9 +872,6 @@ postsubmits:
       nodeSelector:
         testing: test-pool
   - annotations:
-      testgrid-alert-email: dex@aspenmesh.io
-      testgrid-dashboards: istio_release-1.4_istio_postsubmit
-      testgrid-num-failures-to-alert: "1"
     branches:
     - ^release-1.4$
     decorate: true
@@ -986,9 +920,6 @@ postsubmits:
       - emptyDir: {}
         name: docker-root
   - annotations:
-      testgrid-alert-email: dex@aspenmesh.io
-      testgrid-dashboards: istio_release-1.4_istio_postsubmit
-      testgrid-num-failures-to-alert: "1"
     branches:
     - ^release-1.4$
     decorate: true
@@ -1037,9 +968,6 @@ postsubmits:
       - emptyDir: {}
         name: docker-root
   - annotations:
-      testgrid-alert-email: dex@aspenmesh.io
-      testgrid-dashboards: istio_release-1.4_istio_postsubmit
-      testgrid-num-failures-to-alert: "1"
     branches:
     - ^release-1.4$
     decorate: true
@@ -1088,9 +1016,6 @@ postsubmits:
       - emptyDir: {}
         name: docker-root
   - annotations:
-      testgrid-alert-email: dex@aspenmesh.io
-      testgrid-dashboards: istio_release-1.4_istio_postsubmit
-      testgrid-num-failures-to-alert: "1"
     branches:
     - ^release-1.4$
     decorate: true
@@ -1139,9 +1064,6 @@ postsubmits:
       - emptyDir: {}
         name: docker-root
   - annotations:
-      testgrid-alert-email: dex@aspenmesh.io
-      testgrid-dashboards: istio_release-1.4_istio_postsubmit
-      testgrid-num-failures-to-alert: "1"
     branches:
     - ^release-1.4$
     decorate: true
@@ -1190,9 +1112,6 @@ postsubmits:
       - emptyDir: {}
         name: docker-root
   - annotations:
-      testgrid-alert-email: dex@aspenmesh.io
-      testgrid-dashboards: istio_release-1.4_istio_postsubmit
-      testgrid-num-failures-to-alert: "1"
     branches:
     - ^release-1.4$
     decorate: true
@@ -1241,9 +1160,6 @@ postsubmits:
       - emptyDir: {}
         name: docker-root
   - annotations:
-      testgrid-alert-email: dex@aspenmesh.io
-      testgrid-dashboards: istio_release-1.4_istio_postsubmit
-      testgrid-num-failures-to-alert: "1"
     branches:
     - ^release-1.4$
     decorate: true
@@ -1292,9 +1208,6 @@ postsubmits:
       - emptyDir: {}
         name: docker-root
   - annotations:
-      testgrid-alert-email: dex@aspenmesh.io
-      testgrid-dashboards: istio_release-1.4_istio_postsubmit
-      testgrid-num-failures-to-alert: "1"
     branches:
     - ^release-1.4$
     decorate: true
@@ -1345,9 +1258,6 @@ postsubmits:
       - emptyDir: {}
         name: docker-root
   - annotations:
-      testgrid-alert-email: dex@aspenmesh.io
-      testgrid-dashboards: istio_release-1.4_istio_postsubmit
-      testgrid-num-failures-to-alert: "1"
     branches:
     - ^release-1.4$
     decorate: true
@@ -1400,9 +1310,6 @@ postsubmits:
       - emptyDir: {}
         name: docker-root
   - annotations:
-      testgrid-alert-email: dex@aspenmesh.io
-      testgrid-dashboards: istio_release-1.4_istio_postsubmit
-      testgrid-num-failures-to-alert: "1"
     branches:
     - ^release-1.4$
     decorate: true
@@ -1455,9 +1362,6 @@ postsubmits:
       - emptyDir: {}
         name: docker-root
   - annotations:
-      testgrid-alert-email: dex@aspenmesh.io
-      testgrid-dashboards: istio_release-1.4_istio_postsubmit
-      testgrid-num-failures-to-alert: "1"
     branches:
     - ^release-1.4$
     decorate: true
@@ -1510,9 +1414,6 @@ postsubmits:
       - emptyDir: {}
         name: docker-root
   - annotations:
-      testgrid-alert-email: dex@aspenmesh.io
-      testgrid-dashboards: istio_release-1.4_istio_postsubmit
-      testgrid-num-failures-to-alert: "1"
     branches:
     - ^release-1.4$
     decorate: true
@@ -1565,9 +1466,6 @@ postsubmits:
       - emptyDir: {}
         name: docker-root
   - annotations:
-      testgrid-alert-email: dex@aspenmesh.io
-      testgrid-dashboards: istio_release-1.4_istio_postsubmit
-      testgrid-num-failures-to-alert: "1"
     branches:
     - ^release-1.4$
     decorate: true
@@ -1597,9 +1495,6 @@ postsubmits:
       nodeSelector:
         testing: test-pool
   - annotations:
-      testgrid-alert-email: dex@aspenmesh.io
-      testgrid-dashboards: istio_release-1.4_istio_postsubmit
-      testgrid-num-failures-to-alert: "1"
     branches:
     - ^release-1.4$
     decorate: true

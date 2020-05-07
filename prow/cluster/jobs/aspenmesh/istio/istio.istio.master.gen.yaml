@@ -114,9 +114,9 @@ postsubmits:
         - prow/release-commit.sh
         env:  
         - name: DOCKER_HUB
-          value: gcr.io/istio-prow-build
+          value: gcr.io/prow-cicd
         - name: GCS_BUCKET
-          value: istio-private-build/dev
+          value: am-istio-prow/dev
         image: gcr.io/istio-testing/build-tools:master-2020-04-28T21-48-12
         name: ""
         resources:
