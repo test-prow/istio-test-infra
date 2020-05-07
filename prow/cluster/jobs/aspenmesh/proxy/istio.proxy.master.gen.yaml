@@ -67,13 +67,6 @@ presubmits:
       containers:
       - command:
         - ./prow/proxy-presubmit.sh
-        env:
-          - name: BAZEL_BUILD_RBE_INSTANCE
-            value: projects/prow-cicd/instances/default_instance
-          - name: ENVOY_PREFIX
-            value: envoy-wasm
-          - name: ENVOY_REPOSITORY
-            value: https://github.com/envoyproxy/envoy-wasm        
         image: gcr.io/istio-testing/build-tools-proxy:master-2020-04-28T21-48-12
         name: ""
         resources:
@@ -101,13 +94,6 @@ presubmits:
       containers:
       - command:
         - ./prow/proxy-presubmit-asan.sh
-        env:
-          - name: BAZEL_BUILD_RBE_INSTANCE
-            value: projects/prow-cicd/instances/default_instance
-          - name: ENVOY_PREFIX
-            value: envoy-wasm
-          - name: ENVOY_REPOSITORY
-            value: https://github.com/envoyproxy/envoy-wasm
         image: gcr.io/istio-testing/build-tools-proxy:master-2020-04-28T21-48-12
         name: ""
         resources:
@@ -134,14 +120,7 @@ presubmits:
     spec:
       containers:
       - command:
-        - ./prow/proxy-presubmit-tsan.sh
-        env:
-          - name: BAZEL_BUILD_RBE_INSTANCE
-            value: projects/prow-cicd/instances/default_instance
-          - name: ENVOY_PREFIX
-            value: envoy-wasm
-          - name: ENVOY_REPOSITORY
-            value: https://github.com/envoyproxy/envoy-wasm        
+        - ./prow/proxy-presubmit-tsan.sh      
         image: gcr.io/istio-testing/build-tools-proxy:master-2020-04-28T21-48-12
         name: ""
         resources:
@@ -175,7 +154,8 @@ presubmits:
             value: projects/prow-cicd/instances/default_instance
           - name: ENVOY_PREFIX
             value: envoy-wasm
-          - name: ENVOY_REPOSITORY       
+          - name: ENVOY_REPOSITORY
+            value: https://github.com/envoyproxy/envoy-wasm         
         image: gcr.io/istio-testing/build-tools-proxy:master-2020-04-28T21-48-12
         name: ""
         resources:

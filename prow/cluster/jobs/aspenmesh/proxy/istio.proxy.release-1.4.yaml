@@ -26,14 +26,7 @@ presubmits:
       containers:
       - image: gcr.io/istio-testing/prowbazel:0.5.16
         command:
-        - ./prow/proxy-presubmit.sh
-        env:
-          - name: BAZEL_BUILD_RBE_INSTANCE
-            value: projects/prow-cicd/instances/default_instance
-          - name: ENVOY_PREFIX
-            value: envoy-wasm
-          - name: ENVOY_REPOSITORY
-            value: https://github.com/envoyproxy/envoy-wasm        
+        - ./prow/proxy-presubmit.sh     
         resources:
           requests:
             memory: "8Gi"
@@ -42,7 +35,7 @@ presubmits:
             memory: "60Gi"
             cpu: "16000m"
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
 
   - name: proxy-presubmit-asan
     annotations:
@@ -65,14 +58,7 @@ presubmits:
       containers:
       - image: gcr.io/istio-testing/prowbazel:0.5.16
         command:
-        - ./prow/proxy-presubmit-asan.sh
-        env:
-          - name: BAZEL_BUILD_RBE_INSTANCE
-            value: projects/prow-cicd/instances/default_instance
-          - name: ENVOY_PREFIX
-            value: envoy-wasm
-          - name: ENVOY_REPOSITORY
-            value: https://github.com/envoyproxy/envoy-wasm        
+        - ./prow/proxy-presubmit-asan.sh        
         resources:
           requests:
             memory: "8Gi"
@@ -81,7 +67,7 @@ presubmits:
             memory: "60Gi"
             cpu: "16000m"
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
 
   - name: proxy-presubmit-tsan
     annotations:
@@ -105,13 +91,6 @@ presubmits:
       - image: gcr.io/istio-testing/prowbazel:0.5.16
         command:
         - ./prow/proxy-presubmit-tsan.sh
-        env:
-          - name: BAZEL_BUILD_RBE_INSTANCE
-            value: projects/prow-cicd/instances/default_instance
-          - name: ENVOY_PREFIX
-            value: envoy-wasm
-          - name: ENVOY_REPOSITORY
-            value: https://github.com/envoyproxy/envoy-wasm        
         resources:
           requests:
             memory: "8Gi"
@@ -120,7 +99,7 @@ presubmits:
             memory: "60Gi"
             cpu: "16000m"
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
 
   - name: proxy-presubmit-release
     annotations:
@@ -159,7 +138,7 @@ presubmits:
             memory: "60Gi"
             cpu: "16000m"
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
 
 postsubmits:
 
@@ -210,4 +189,4 @@ postsubmits:
             memory: "60Gi"
             cpu: "16000m"
       nodeSelector:
-        testing: test-pool
+        testing: build-pool

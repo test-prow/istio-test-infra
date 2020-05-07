@@ -28,7 +28,7 @@ postsubmits:
         securityContext:
           privileged: true
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
   - annotations:
     branches:
     - ^release-1.4$
@@ -57,7 +57,7 @@ postsubmits:
         securityContext:
           privileged: true
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
   - annotations:
     branches:
     - ^release-1.4$
@@ -99,7 +99,7 @@ postsubmits:
         - mountPath: /var/lib/docker
           name: docker-root
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
       volumes:
       - hostPath:
           path: /lib/modules
@@ -137,7 +137,7 @@ postsubmits:
         securityContext:
           privileged: true
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
 presubmits:
   aspenmesh/private-cni:
   - always_run: true
@@ -168,7 +168,7 @@ presubmits:
         securityContext:
           privileged: true
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
   - always_run: true
     annotations:
     branches:
@@ -198,7 +198,7 @@ presubmits:
         securityContext:
           privileged: true
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
   - always_run: true
     annotations:
     branches:
@@ -241,7 +241,7 @@ presubmits:
         - mountPath: /var/lib/docker
           name: docker-root
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
       volumes:
       - hostPath:
           path: /lib/modules
@@ -280,4 +280,4 @@ presubmits:
         securityContext:
           privileged: true
       nodeSelector:
-        testing: test-pool
+        testing: build-pool

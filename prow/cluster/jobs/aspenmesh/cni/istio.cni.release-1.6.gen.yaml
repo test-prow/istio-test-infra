@@ -28,7 +28,7 @@ postsubmits:
         securityContext:
           privileged: true
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
   - annotations:
     branches:
     - ^release-1.6$
@@ -57,7 +57,7 @@ postsubmits:
         securityContext:
           privileged: true
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
   - annotations:
     branches:
     - ^release-1.6$
@@ -84,7 +84,7 @@ postsubmits:
         securityContext:
           privileged: true
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
   - annotations:
     branches:
     - ^release-1.6$
@@ -111,7 +111,7 @@ postsubmits:
         securityContext:
           privileged: true
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
 presubmits:
   aspenmesh/private-cni:
   - always_run: true
@@ -142,7 +142,7 @@ presubmits:
         securityContext:
           privileged: true
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
   - always_run: true
     annotations:
     branches:
@@ -172,7 +172,7 @@ presubmits:
         securityContext:
           privileged: true
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
   - always_run: true
     annotations:
     branches:
@@ -200,7 +200,7 @@ presubmits:
         securityContext:
           privileged: true
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
   - always_run: true
     annotations:
     branches:
@@ -228,4 +228,4 @@ presubmits:
         securityContext:
           privileged: true
       nodeSelector:
-        testing: test-pool
+        testing: build-pool

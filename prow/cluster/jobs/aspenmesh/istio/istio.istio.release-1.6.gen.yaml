@@ -35,7 +35,7 @@ postsubmits:
           name: build-cache-pvc
           subPath: gomod
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
       volumes:
       - name: build-cache-pvc
         persistentVolumeClaim:
@@ -82,7 +82,7 @@ postsubmits:
         - mountPath: /var/lib/docker
           name: docker-root
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
       volumes:
       - name: build-cache-pvc
         persistentVolumeClaim:
@@ -128,7 +128,7 @@ postsubmits:
         securityContext:
           privileged: true
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
   - annotations:
     branches:
     - ^release-1.6$
@@ -169,7 +169,7 @@ postsubmits:
         - mountPath: /var/lib/docker
           name: docker-root
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
       volumes:
       - hostPath:
           path: /lib/modules
@@ -213,7 +213,7 @@ postsubmits:
         - mountPath: /var/lib/docker
           name: docker-root
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
       volumes:
       - emptyDir: {}
         name: docker-root
@@ -255,7 +255,7 @@ postsubmits:
         - mountPath: /var/lib/docker
           name: docker-root
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
       volumes:
       - hostPath:
           path: /lib/modules
@@ -305,7 +305,7 @@ postsubmits:
         - mountPath: /var/lib/docker
           name: docker-root
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
       volumes:
       - hostPath:
           path: /lib/modules
@@ -355,7 +355,7 @@ postsubmits:
         - mountPath: /var/lib/docker
           name: docker-root
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
       volumes:
       - hostPath:
           path: /lib/modules
@@ -405,7 +405,7 @@ postsubmits:
         - mountPath: /var/lib/docker
           name: docker-root
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
       volumes:
       - hostPath:
           path: /lib/modules
@@ -455,7 +455,7 @@ postsubmits:
         - mountPath: /var/lib/docker
           name: docker-root
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
       volumes:
       - hostPath:
           path: /lib/modules
@@ -505,7 +505,7 @@ postsubmits:
         - mountPath: /var/lib/docker
           name: docker-root
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
       volumes:
       - hostPath:
           path: /lib/modules
@@ -561,7 +561,7 @@ postsubmits:
         - mountPath: /var/lib/docker
           name: docker-root
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
       volumes:
       - hostPath:
           path: /lib/modules
@@ -617,7 +617,7 @@ postsubmits:
         - mountPath: /var/lib/docker
           name: docker-root
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
       volumes:
       - hostPath:
           path: /lib/modules
@@ -671,7 +671,7 @@ postsubmits:
         - mountPath: /var/lib/docker
           name: docker-root
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
       volumes:
       - hostPath:
           path: /lib/modules
@@ -726,7 +726,7 @@ postsubmits:
         - mountPath: /var/lib/docker
           name: docker-root
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
       volumes:
       - hostPath:
           path: /lib/modules
@@ -775,7 +775,7 @@ presubmits:
           name: build-cache-pvc
           subPath: gomod
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
       volumes:
       - name: build-cache-pvc
         persistentVolumeClaim:
@@ -824,7 +824,7 @@ presubmits:
         - mountPath: /var/lib/docker
           name: docker-root
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
       volumes:
       - name: build-cache-pvc
         persistentVolumeClaim:
@@ -866,7 +866,7 @@ presubmits:
         securityContext:
           privileged: true
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
   - always_run: true
     annotations:
     branches:
@@ -906,7 +906,7 @@ presubmits:
         - mountPath: /var/lib/docker
           name: docker-root
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
       volumes:
       - hostPath:
           path: /lib/modules
@@ -957,7 +957,7 @@ presubmits:
         - mountPath: /var/lib/docker
           name: docker-root
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
       volumes:
       - hostPath:
           path: /lib/modules
@@ -1008,7 +1008,7 @@ presubmits:
         - mountPath: /var/lib/docker
           name: docker-root
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
       volumes:
       - hostPath:
           path: /lib/modules
@@ -1059,7 +1059,7 @@ presubmits:
         - mountPath: /var/lib/docker
           name: docker-root
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
       volumes:
       - hostPath:
           path: /lib/modules
@@ -1110,7 +1110,7 @@ presubmits:
         - mountPath: /var/lib/docker
           name: docker-root
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
       volumes:
       - hostPath:
           path: /lib/modules
@@ -1163,7 +1163,7 @@ presubmits:
         - mountPath: /var/lib/docker
           name: docker-root
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
       volumes:
       - hostPath:
           path: /lib/modules
@@ -1216,7 +1216,7 @@ presubmits:
         - mountPath: /var/lib/docker
           name: docker-root
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
       volumes:
       - hostPath:
           path: /lib/modules
@@ -1267,7 +1267,7 @@ presubmits:
         - mountPath: /var/lib/docker
           name: docker-root
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
       volumes:
       - hostPath:
           path: /lib/modules
@@ -1320,7 +1320,7 @@ presubmits:
         - mountPath: /var/lib/docker
           name: docker-root
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
       volumes:
       - hostPath:
           path: /lib/modules
@@ -1365,7 +1365,7 @@ presubmits:
         - mountPath: /var/lib/docker
           name: docker-root
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
       volumes:
       - emptyDir: {}
         name: docker-root
@@ -1395,7 +1395,7 @@ presubmits:
         securityContext:
           privileged: true
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
   - always_run: true
     annotations:
     branches:
@@ -1422,4 +1422,4 @@ presubmits:
         securityContext:
           privileged: true
       nodeSelector:
-        testing: test-pool
+        testing: build-pool

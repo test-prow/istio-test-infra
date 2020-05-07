@@ -33,7 +33,7 @@ postsubmits:
         securityContext:
           privileged: true
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
   - annotations:
     branches:
     - ^release-1.4$
@@ -61,7 +61,7 @@ postsubmits:
         securityContext:
           privileged: true
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
   - annotations:
     branches:
     - ^release-1.4$
@@ -93,7 +93,7 @@ postsubmits:
         securityContext:
           privileged: true
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
   - annotations:
     branches:
     - ^release-1.4$
@@ -131,7 +131,7 @@ postsubmits:
         - mountPath: /var/lib/docker
           name: docker-root
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
       volumes:
       - hostPath:
           path: /lib/modules
@@ -180,7 +180,7 @@ postsubmits:
         - mountPath: /var/lib/docker
           name: docker-root
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
       volumes:
       - hostPath:
           path: /lib/modules
@@ -227,7 +227,7 @@ postsubmits:
         - mountPath: /var/lib/docker
           name: docker-root
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
       volumes:
       - hostPath:
           path: /lib/modules
@@ -276,7 +276,7 @@ postsubmits:
         - mountPath: /var/lib/docker
           name: docker-root
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
       volumes:
       - hostPath:
           path: /lib/modules
@@ -325,7 +325,7 @@ postsubmits:
         - mountPath: /var/lib/docker
           name: docker-root
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
       volumes:
       - hostPath:
           path: /lib/modules
@@ -375,7 +375,7 @@ postsubmits:
         - mountPath: /var/lib/docker
           name: docker-root
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
       volumes:
       - hostPath:
           path: /lib/modules
@@ -427,7 +427,7 @@ postsubmits:
         - mountPath: /var/lib/docker
           name: docker-root
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
       volumes:
       - hostPath:
           path: /lib/modules
@@ -481,7 +481,7 @@ postsubmits:
         - mountPath: /var/lib/docker
           name: docker-root
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
       volumes:
       - hostPath:
           path: /lib/modules
@@ -536,7 +536,7 @@ postsubmits:
         - mountPath: /var/lib/docker
           name: docker-root
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
       volumes:
       - hostPath:
           path: /lib/modules
@@ -591,7 +591,7 @@ postsubmits:
         - mountPath: /var/lib/docker
           name: docker-root
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
       volumes:
       - hostPath:
           path: /lib/modules
@@ -644,7 +644,7 @@ postsubmits:
         - mountPath: /var/lib/docker
           name: docker-root
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
       volumes:
       - hostPath:
           path: /lib/modules
@@ -691,7 +691,7 @@ postsubmits:
         - mountPath: /var/lib/docker
           name: docker-root
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
       volumes:
       - hostPath:
           path: /lib/modules
@@ -730,7 +730,7 @@ postsubmits:
         securityContext:
           privileged: true
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
   - annotations:
     branches:
     - ^release-1.4$
@@ -758,7 +758,7 @@ postsubmits:
         securityContext:
           privileged: true
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
   - annotations:
     branches:
     - ^release-1.4$
@@ -786,7 +786,7 @@ postsubmits:
         securityContext:
           privileged: true
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
   - annotations:
     branches:
     - ^release-1.4$
@@ -814,7 +814,7 @@ postsubmits:
         securityContext:
           privileged: true
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
   - annotations:
     branches:
     - ^release-1.4$
@@ -842,7 +842,7 @@ postsubmits:
         securityContext:
           privileged: true
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
   - annotations:
     branches:
     - ^release-1.4$
@@ -870,7 +870,7 @@ postsubmits:
         securityContext:
           privileged: true
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
   - annotations:
     branches:
     - ^release-1.4$
@@ -907,7 +907,7 @@ postsubmits:
         - mountPath: /var/lib/docker
           name: docker-root
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
       volumes:
       - hostPath:
           path: /lib/modules
@@ -955,7 +955,7 @@ postsubmits:
         - mountPath: /var/lib/docker
           name: docker-root
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
       volumes:
       - hostPath:
           path: /lib/modules
@@ -1003,7 +1003,7 @@ postsubmits:
         - mountPath: /var/lib/docker
           name: docker-root
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
       volumes:
       - hostPath:
           path: /lib/modules
@@ -1051,7 +1051,7 @@ postsubmits:
         - mountPath: /var/lib/docker
           name: docker-root
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
       volumes:
       - hostPath:
           path: /lib/modules
@@ -1099,7 +1099,7 @@ postsubmits:
         - mountPath: /var/lib/docker
           name: docker-root
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
       volumes:
       - hostPath:
           path: /lib/modules
@@ -1147,7 +1147,7 @@ postsubmits:
         - mountPath: /var/lib/docker
           name: docker-root
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
       volumes:
       - hostPath:
           path: /lib/modules
@@ -1195,7 +1195,7 @@ postsubmits:
         - mountPath: /var/lib/docker
           name: docker-root
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
       volumes:
       - hostPath:
           path: /lib/modules
@@ -1245,7 +1245,7 @@ postsubmits:
         - mountPath: /var/lib/docker
           name: docker-root
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
       volumes:
       - hostPath:
           path: /lib/modules
@@ -1297,7 +1297,7 @@ postsubmits:
         - mountPath: /var/lib/docker
           name: docker-root
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
       volumes:
       - hostPath:
           path: /lib/modules
@@ -1349,7 +1349,7 @@ postsubmits:
         - mountPath: /var/lib/docker
           name: docker-root
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
       volumes:
       - hostPath:
           path: /lib/modules
@@ -1401,7 +1401,7 @@ postsubmits:
         - mountPath: /var/lib/docker
           name: docker-root
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
       volumes:
       - hostPath:
           path: /lib/modules
@@ -1453,7 +1453,7 @@ postsubmits:
         - mountPath: /var/lib/docker
           name: docker-root
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
       volumes:
       - hostPath:
           path: /lib/modules
@@ -1493,7 +1493,7 @@ postsubmits:
         securityContext:
           privileged: true
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
   - annotations:
     branches:
     - ^release-1.4$
@@ -1522,7 +1522,7 @@ postsubmits:
         securityContext:
           privileged: true
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
 presubmits:
   aspenmesh/private-istio:
   - always_run: true
@@ -1561,7 +1561,7 @@ presubmits:
         securityContext:
           privileged: true
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
   - always_run: false
     annotations:
       testgrid-dashboards: istio_release-1.4_istio
@@ -1593,7 +1593,7 @@ presubmits:
         securityContext:
           privileged: true
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
   - always_run: true
     annotations:
       testgrid-dashboards: istio_release-1.4_istio
@@ -1622,7 +1622,7 @@ presubmits:
         securityContext:
           privileged: true
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
   - always_run: true
     annotations:
       testgrid-dashboards: istio_release-1.4_istio
@@ -1654,7 +1654,7 @@ presubmits:
         securityContext:
           privileged: true
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
   - always_run: true
     annotations:
       testgrid-dashboards: istio_release-1.4_istio
@@ -1686,7 +1686,7 @@ presubmits:
         securityContext:
           privileged: true
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
   - always_run: true
     annotations:
       testgrid-dashboards: istio_release-1.4_istio
@@ -1718,7 +1718,7 @@ presubmits:
         securityContext:
           privileged: true
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
   - always_run: true
     annotations:
       testgrid-dashboards: istio_release-1.4_istio
@@ -1750,7 +1750,7 @@ presubmits:
         securityContext:
           privileged: true
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
   - always_run: true
     annotations:
       testgrid-dashboards: istio_release-1.4_istio
@@ -1791,7 +1791,7 @@ presubmits:
         - mountPath: /var/lib/docker
           name: docker-root
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
       volumes:
       - hostPath:
           path: /lib/modules
@@ -1843,7 +1843,7 @@ presubmits:
         - mountPath: /var/lib/docker
           name: docker-root
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
       volumes:
       - hostPath:
           path: /lib/modules
@@ -1895,7 +1895,7 @@ presubmits:
         - mountPath: /var/lib/docker
           name: docker-root
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
       volumes:
       - hostPath:
           path: /lib/modules
@@ -1948,7 +1948,7 @@ presubmits:
         - mountPath: /var/lib/docker
           name: docker-root
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
       volumes:
       - hostPath:
           path: /lib/modules
@@ -2000,7 +2000,7 @@ presubmits:
         - mountPath: /var/lib/docker
           name: docker-root
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
       volumes:
       - hostPath:
           path: /lib/modules
@@ -2052,7 +2052,7 @@ presubmits:
         - mountPath: /var/lib/docker
           name: docker-root
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
       volumes:
       - hostPath:
           path: /lib/modules
@@ -2104,7 +2104,7 @@ presubmits:
         - mountPath: /var/lib/docker
           name: docker-root
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
       volumes:
       - hostPath:
           path: /lib/modules
@@ -2157,7 +2157,7 @@ presubmits:
         - mountPath: /var/lib/docker
           name: docker-root
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
       volumes:
       - hostPath:
           path: /lib/modules
@@ -2210,7 +2210,7 @@ presubmits:
         - mountPath: /var/lib/docker
           name: docker-root
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
       volumes:
       - hostPath:
           path: /lib/modules
@@ -2263,7 +2263,7 @@ presubmits:
         - mountPath: /var/lib/docker
           name: docker-root
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
       volumes:
       - hostPath:
           path: /lib/modules
@@ -2316,7 +2316,7 @@ presubmits:
         - mountPath: /var/lib/docker
           name: docker-root
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
       volumes:
       - hostPath:
           path: /lib/modules
@@ -2365,7 +2365,7 @@ presubmits:
         - mountPath: /var/lib/docker
           name: docker-root
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
       volumes:
       - hostPath:
           path: /lib/modules
@@ -2416,7 +2416,7 @@ presubmits:
         - mountPath: /var/lib/docker
           name: docker-root
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
       volumes:
       - hostPath:
           path: /lib/modules
@@ -2470,7 +2470,7 @@ presubmits:
         - mountPath: /var/lib/docker
           name: docker-root
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
       volumes:
       - hostPath:
           path: /lib/modules
@@ -2526,7 +2526,7 @@ presubmits:
         - mountPath: /var/lib/docker
           name: docker-root
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
       volumes:
       - hostPath:
           path: /lib/modules
@@ -2583,7 +2583,7 @@ presubmits:
         - mountPath: /var/lib/docker
           name: docker-root
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
       volumes:
       - hostPath:
           path: /lib/modules
@@ -2640,7 +2640,7 @@ presubmits:
         - mountPath: /var/lib/docker
           name: docker-root
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
       volumes:
       - hostPath:
           path: /lib/modules
@@ -2690,7 +2690,7 @@ presubmits:
         - mountPath: /var/lib/docker
           name: docker-root
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
       volumes:
       - hostPath:
           path: /lib/modules
@@ -2731,7 +2731,7 @@ presubmits:
         securityContext:
           privileged: true
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
   - always_run: true
     annotations:
       testgrid-dashboards: istio_release-1.4_istio
@@ -2760,7 +2760,7 @@ presubmits:
         securityContext:
           privileged: true
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
   - always_run: true
     annotations:
       testgrid-dashboards: istio_release-1.4_istio
@@ -2789,4 +2789,4 @@ presubmits:
         securityContext:
           privileged: true
       nodeSelector:
-        testing: test-pool
+        testing: build-pool
