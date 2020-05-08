@@ -980,6 +980,9 @@ postsubmits:
     branches:
     - ^release-1.5$
     decorate: true
+    clone_uri: git@github.com:aspenmesh/private-istio.git
+    labels:
+      preset-enable-ssh: "true"
     decoration_config:
       timeout: 4h0m0s
     name: integ-k8s-114_istio_release-1.5_postsubmit
@@ -1029,6 +1032,9 @@ postsubmits:
     branches:
     - ^release-1.5$
     decorate: true
+    clone_uri: git@github.com:aspenmesh/private-istio.git
+    labels:
+      preset-enable-ssh: "true"
     decoration_config:
       timeout: 4h0m0s
     name: integ-k8s-115_istio_release-1.5_postsubmit
@@ -1078,6 +1084,9 @@ postsubmits:
     branches:
     - ^release-1.5$
     decorate: true
+    clone_uri: git@github.com:aspenmesh/private-istio.git
+    labels:
+      preset-enable-ssh: "true"
     decoration_config:
       timeout: 4h0m0s
     name: integ-k8s-116_istio_release-1.5_postsubmit
