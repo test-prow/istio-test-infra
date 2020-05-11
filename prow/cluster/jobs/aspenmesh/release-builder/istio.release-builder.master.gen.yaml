@@ -322,6 +322,11 @@ presubmits:
       containers:
       - command:
         - release/build-warning.sh
+        env:
+          - name: DOCKER_HUB
+            value: gcr.io/prow-cicd
+          - name: GCS_BUCKET
+            value: am-istio-prow/prerelease  
         image: gcr.io/istio-testing/build-tools:master-2020-05-04T23-19-43
         name: ""
         resources:
@@ -349,6 +354,15 @@ presubmits:
       containers:
       - command:
         - release/publish-warning.sh
+        env:
+          - name: SOURCE_GCS_BUCKET
+            value: am-istio-prow/prerelease
+          - name: GCS_BUCKET
+            value: am-istio-prow/release
+          - name: DOCKER_HUB
+            value: docker.io/dexchen
+          - name: GITHUB_ORG
+            value: aspenmesh    
         image: gcr.io/istio-testing/build-tools:master-2020-05-04T23-19-43
         name: ""
         resources:
